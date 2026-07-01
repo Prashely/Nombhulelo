@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nombulelo Digama | Beauty Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website for Nombulelo Digama, an aspiring beauty therapist specialising in brows, makeup, wig installation, and client care."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              serif: ["Georgia", "serif"],
+            },
+            colors: {
+              ink: "#0a0a0a",
+              paper: "#f7f7f3",
+              soft: "#ededdf",
+              line: "#d8d8cd",
+            },
+            boxShadow: {
+              soft: "0 24px 80px rgba(0,0,0,0.08)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: #f7f7f3;
+        color: #0a0a0a;
+      }
+      .image-slot {
+        background-image:
+          linear-gradient(45deg, rgba(0, 0, 0, 0.035) 25%, transparent 25%),
+          linear-gradient(-45deg, rgba(0, 0, 0, 0.035) 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.035) 75%),
+          linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.035) 75%);
+        background-size: 18px 18px;
+        background-position:
+          0 0,
+          0 9px,
+          9px -9px,
+          -9px 0;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased">
+    <header
+      class="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-paper/90 backdrop-blur-xl"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8"
+        aria-label="Main navigation"
+      >
+        <a href="#home" class="text-sm font-black uppercase tracking-[0.28em]"
+          >Nombulelo Digama</a
+        >
+        <button
+          id="menuButton"
+          class="inline-flex items-center rounded-full border border-black/15 p-2 md:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+        <div
+          id="navLinks"
+          class="hidden absolute left-5 right-5 top-16 rounded-2xl border border-black/10 bg-paper p-4 shadow-soft md:static md:flex md:items-center md:gap-7 md:border-0 md:bg-transparent md:p-0 md:shadow-none"
+        >
+          <a
+            href="#about"
+            class="block py-2 text-sm font-medium text-black/75 hover:text-black"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="block py-2 text-sm font-medium text-black/75 hover:text-black"
+            >Services</a
+          >
+          <a
+            href="#portfolio"
+            class="block py-2 text-sm font-medium text-black/75 hover:text-black"
+            >Portfolio</a
+          >
+          <a
+            href="#videos"
+            class="block py-2 text-sm font-medium text-black/75 hover:text-black"
+            >Videos</a
+          >
+          <a
+            href="#contact"
+            class="mt-3 inline-flex rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white md:mt-0"
+            >Book / Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section
+        class="mx-auto grid min-h-screen max-w-7xl items-center gap-10 px-5 pb-16 pt-28 lg:grid-cols-[1.05fr_0.95fr] lg:px-8"
+      >
+        <div>
+          <p
+            class="mb-5 inline-flex rounded-full border border-black/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-black/70"
+          >
+            Pretoria | Fourways | Midrand | Santon
+          </p>
+          <h1
+            class="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl"
+          >
+            Nombulelo Digama
+          </h1>
+          <p
+            class="mt-5 max-w-2xl text-xl font-medium text-black/70 sm:text-2xl"
+          >
+            Beauty Therapist | Brow & Beauty Enthusiast
+          </p>
+          <p class="mt-6 max-w-2xl text-base leading-6 text-black/70">
+            Passionate about brow treatments, makeup application, wig
+            installation, and client care. Currently seeking a professional
+            salon opportunity to gain industry experience, receive mentorship,
+            and grow long-term in the beauty industry.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="#portfolio"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-black px-7 py-4 text-sm font-bold text-white"
+            >
+              View Proof of Work
+              <i data-lucide="arrow-down" class="h-4 w-4"></i>
+            </a>
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center gap-2 rounded-full border border-black/20 px-7 py-4 text-sm font-bold"
+            >
+              Contact Me <i data-lucide="send" class="h-4 w-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div
+            class="aspect-[4/5] overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-soft"
+          >
+            <img
+              src="images/5.jpeg"
+              alt="Beauty studio portrait with logo"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div
+            class="absolute -bottom-5 left-5 right-5 rounded-2xl border border-black/10 bg-paper p-5 shadow-soft"
+          >
+            <div class="grid grid-cols-3 gap-3 text-center">
+              <div>
+                <p class="text-2xl font-black">Brows</p>
+                <p
+                  class="mt-1 text-xs uppercase tracking-[0.18em] text-black/55"
+                >
+                  Wax / Tint
+                </p>
+              </div>
+              <div>
+                <p class="text-2xl font-black">Makeup</p>
+                <p
+                  class="mt-1 text-xs uppercase tracking-[0.18em] text-black/55"
+                >
+                  Events
+                </p>
+              </div>
+              <div>
+                <p class="text-2xl font-black">Wigs</p>
+                <p
+                  class="mt-1 text-xs uppercase tracking-[0.18em] text-black/55"
+                >
+                  Custom
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="border-y border-black/10 bg-white">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-8"
+        >
+          <div>
+            <p
+              class="text-xs font-black uppercase tracking-[0.28em] text-black/45"
+            >
+              About Me
+            </p>
+            <h2
+              class="mt-4 max-w-md text-4xl font-black tracking-tight sm:text-5xl"
+            >
+              Building a career in beauty, one client at a time.
+            </h2>
+          </div>
+          <div class="space-y-6 text-base leading-6 text-black/70">
+            <p>
+              I am a passionate and dedicated beauty enthusiast with a strong
+              interest in the beauty industry and client care. Through
+              independent practice and working with clients, I have developed
+              foundational skills in brow treatments, makeup application, and
+              beauty services.
+            </p>
+            <p>
+              I am eager to learn, hardworking, and committed to building a
+              long-term career in the beauty industry. My goal is to grow within
+              a professional salon environment where I can learn from
+              experienced professionals and contribute positively to a salon
+              team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+        <div
+          class="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end"
+        >
+          <div>
+            <p
+              class="text-xs font-black uppercase tracking-[0.28em] text-black/45"
+            >
+              Beauty Services
+            </p>
+            <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              Services & Practical Exposure
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl border border-black/10 bg-white p-6">
+            <i data-lucide="sparkles" class="h-7 w-7"></i>
+            <h3 class="mt-5 text-xl font-black">Brow Treatments</h3>
+            <p class="mt-3 text-sm leading-7 text-black/65">
+              Brow lamination, waxing, tinting, shaping, and grooming services.
+            </p>
+          </article>
+          <article class="rounded-2xl border border-black/10 bg-white p-6">
+            <i data-lucide="brush" class="h-7 w-7"></i>
+            <h3 class="mt-5 text-xl font-black">Makeup Application</h3>
+            <p class="mt-3 text-sm leading-7 text-black/65">
+              Basic makeup application for special occasions, events, and
+              photoshoots.
+            </p>
+          </article>
+          <article class="rounded-2xl border border-black/10 bg-white p-6">
+            <i data-lucide="scissors" class="h-7 w-7"></i>
+            <h3 class="mt-5 text-xl font-black">Wigs & Ponytails</h3>
+            <p class="mt-3 text-sm leading-7 text-black/65">
+              Wig installation, frontal ponytails, natural ponytails, plucking,
+              bleaching knots, styling, and customization.
+            </p>
+          </article>
+          <article class="rounded-2xl border border-black/10 bg-white p-6">
+            <i data-lucide="eye" class="h-7 w-7"></i>
+            <h3 class="mt-5 text-xl font-black">Cluster Lashes</h3>
+            <p class="mt-3 text-sm leading-7 text-black/65">
+              Cluster lash applications and beauty enhancement services.
+            </p>
+          </article>
+          <article class="rounded-2xl border border-black/10 bg-white p-6">
+            <i data-lucide="messages-square" class="h-7 w-7"></i>
+            <h3 class="mt-5 text-xl font-black">Client Consultations</h3>
+            <p class="mt-3 text-sm leading-7 text-black/65">
+              Understanding each client’s beauty goals and recommending suitable
+              treatments.
+            </p>
+          </article>
+          <article class="rounded-2xl border border-black/10 bg-white p-6">
+            <i data-lucide="shield-check" class="h-7 w-7"></i>
+            <h3 class="mt-5 text-xl font-black">Hygiene & Care</h3>
+            <p class="mt-3 text-sm leading-7 text-black/65">
+              Maintaining workstation cleanliness, sanitation standards, and
+              professional client communication.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="bg-black text-white relative"
+        style="
+          background-image: url(&quot;images/1.jpeg&quot;);
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="absolute inset-0 bg-black/90 pointer-events-none"></div>
+        <div
+          class="mx-auto relative z-10 grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[0.85fr_1.15fr] lg:px-8"
+        >
+          <div>
+            <p
+              class="text-xs font-black uppercase tracking-[0.28em] text-white/45"
+            >
+              Strengths
+            </p>
+            <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              Professional, reliable, and ready to learn.
+            </h2>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 p-5">
+              Positive attitude
+            </div>
+            <div class="rounded-2xl border border-white/10 p-5">
+              Strong willingness to learn
+            </div>
+            <div class="rounded-2xl border border-white/10 p-5">
+              Professional communication
+            </div>
+            <div class="rounded-2xl border border-white/10 p-5">
+              Attention to detail
+            </div>
+            <div class="rounded-2xl border border-white/10 p-5">
+              Reliable and hardworking
+            </div>
+            <div class="rounded-2xl border border-white/10 p-5">
+              Client care and relationship building
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+        <div class="mb-10 max-w-3xl">
+          <p
+            class="text-xs font-black uppercase tracking-[0.28em] text-black/45"
+          >
+            My Work
+          </p>
+          <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+            Beauty & Hair Gallery
+          </h2>
+          <p class="mt-5 text-base leading-8 text-black/65">
+            Discover a curated gallery of beauty and hair transformations from
+            recent client sessions.
+          </p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4 mb-4">
+          <div
+            class="aspect-[4/5] overflow-hidden rounded-3xl border border-black/10 bg-white"
+          >
+            <img
+              src="images/9.jpeg"
+              alt="Frontal ponytail detail"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-[4/5] overflow-hidden rounded-3xl border border-black/10 bg-white"
+          >
+            <img
+              src="images/15.jpeg"
+              alt="Hairline and edge styling detail"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-[4/5] overflow-hidden rounded-3xl border border-black/10 bg-white"
+          >
+            <img
+              src="images/12.jpeg"
+              alt="Hair and scalp styling detail"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-[4/5] overflow-hidden rounded-3xl border border-black/10 bg-white"
+          >
+            <img
+              src="images/18.jpeg"
+              alt="Finishing makeup and hair detail"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div
+            class="aspect-[4/5] overflow-hidden rounded-3xl border border-black/10 bg-white"
+          >
+            <img
+              src="images/2.jpeg"
+              alt="Frontal ponytail detail"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-[4/5] overflow-hidden rounded-3xl border border-black/10 bg-white"
+          >
+            <img
+              src="images/17.jpeg"
+              alt="Hairline and edge styling detail"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-[4/5] overflow-hidden rounded-3xl border border-black/10 bg-white"
+          >
+            <img
+              src="images/14.jpeg"
+              alt="Hair and scalp styling detail"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-[4/5] overflow-hidden rounded-3xl border border-black/10 bg-white"
+          >
+            <img
+              src="images/7.jpeg"
+              alt="Finishing makeup and hair detail"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="videos" class="border-y border-black/10 bg-white">
+        <div class="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+          <div class="mb-10 max-w-3xl">
+            <p
+              class="text-xs font-black uppercase tracking-[0.28em] text-black/45"
+            >
+              Lastest Work
+            </p>
+            <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              Video Showcase
+            </h2>
+          </div>
+          <div class="grid gap-5 lg:grid-cols-1">
+            <article
+              class="overflow-hidden rounded-2xl border border-black/10 bg-paper"
+            >
+              <div class="relative aspect-video overflow-hidden bg-black">
+                <video
+                  src="images/video.mp4"
+                  class="h-full w-full object-cover"
+                  controls
+                  preload="metadata"
+                ></video>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        id="contact"
+        class="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[1fr_0.95fr] lg:px-8"
+      >
+        <div>
+          <p
+            class="text-xs font-black uppercase tracking-[0.28em] text-black/45"
+          >
+            Contact
+          </p>
+          <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+            Ready for salon opportunities, bookings, and collaborations.
+          </h2>
+          <p class="mt-6 max-w-2xl text-base leading-8 text-black/65">
+            Available to relocate anywhere in Gauteng. Reach out for beauty
+            work, mentorship opportunities, salon roles, or portfolio enquiries.
+          </p>
+        </div>
+        <div
+          class="rounded-3xl border border-black/10 bg-white p-6 shadow-soft"
+        >
+          <div class="space-y-4">
+            <a
+              href="tel:+27665858220"
+              class="flex items-center gap-4 rounded-2xl border border-black/10 p-4 hover:bg-paper"
+            >
+              <i data-lucide="phone" class="h-5 w-5"></i>
+              <span class="font-semibold">+27 66 585 8220</span>
+            </a>
+            <a
+              href="mailto:creseldadigama@gmail.com"
+              class="flex items-center gap-4 rounded-2xl border border-black/10 p-4 hover:bg-paper"
+            >
+              <i data-lucide="mail" class="h-5 w-5"></i>
+              <span class="font-semibold">creseldadigama@gmail.com</span>
+            </a>
+            <a
+              href="https://www.instagram.com/ndb_eauty_studio?igsh=MWtlN2lqeHZ2YzIxeQ%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-4 rounded-2xl border border-black/10 p-4 hover:bg-paper"
+            >
+              <i data-lucide="instagram" class="h-5 w-5"></i>
+              <span class="font-semibold">@nd_beauty_studio</span>
+            </a>
+            <a
+              href="https://www.instagram.com/ndb_eauty_studio?igsh=MWtlN2lqeHZ2YzIxeQ%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-4 rounded-2xl border border-black/10 p-4 hover:bg-paper"
+            >
+              <i data-lucide="instagram" class="h-5 w-5"></i>
+              <span class="font-semibold">nd_beauty_studio</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-black/10 px-5 py-8 lg:px-8">
+      <div
+        class="mx-auto flex max-w-7xl flex-col justify-between gap-3 text-sm text-black/55 sm:flex-row"
+      >
+        <p>
+          &copy; <span id="year"></span> Nombulelo Digama. Beauty Portfolio.
+        </p>
+        <p>Beauty Therapist | Brow & Beauty Enthusiast</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const navLinks = document.getElementById("navLinks");
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = !navLinks.classList.contains("hidden");
+        navLinks.classList.toggle("hidden");
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 768) {
+            navLinks.classList.add("hidden");
+            menuButton.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
